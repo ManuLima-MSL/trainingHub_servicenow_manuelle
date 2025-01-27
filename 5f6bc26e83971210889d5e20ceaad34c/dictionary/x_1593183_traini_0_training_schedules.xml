@@ -2,7 +2,7 @@
     <element db_object_id="3e21162683d71210889d5e20ceaad38e" label="Training Schedules" max_length="40" name="x_1593183_traini_0_training_schedules" type="collection">
         <element display="true" label="Course" max_length="32" name="course" reference="x_1593183_traini_0_training_courses" type="reference"/>
         <element label="Seats Available" max_length="40" name="seats_available" type="integer"/>
-        <element label="Instructor" max_length="32" name="instructor" reference="sys_user" type="reference"/>
+        <element label="Instructor" max_length="32" name="instructor" reference="sys_user" reference_qual="answer = active=true^group=4ea5566a83d71210889d5e20ceaad3fc;" reference_qual_condition="answer = active=true^group=4ea5566a83d71210889d5e20ceaad3fc;" type="reference"/>
         <element label="Training Date" max_length="40" name="training_date" type="glide_date"/>
         <index name="index">
             <element name="course"/>
