@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1593183_traini_0.TrainingUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>TrainingUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[// Script Include: TrainingUtils
+var TrainingUtils = Class.create();
+TrainingUtils.prototype = {
+    initialize: function() {},
+
+    getEnrolledSchedules: function(userId) {  // Aceita o userId como parâmetro
+        var enrolledSchedules = [];
+        var grEnrollment = new GlideRecord("x_1593183_traini_0_training_enrollments");
+        grEnrollment.addQuery("user", userId); // Usa o userId fornecido
+        grEnrollment.query();
+        while (grEnrollment.next()) {
+            enrolledSchedules.push(grEnrollment.schedule.toString()); // Adiciona o sys_id da agenda
+        }
+        return enrolledSchedules;
+    },
+
+    type: 'TrainingUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 18:58:02</sys_created_on>
+        <sys_id>20c95fbe83d71210889d5e20ceaad339</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>TrainingUtils</sys_name>
+        <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
+        <sys_update_name>sys_script_include_20c95fbe83d71210889d5e20ceaad339</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 20:33:30</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>20c95fbe83d71210889d5e20ceaad339</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 18:58:02</sys_created_on>
+        <sys_id>c3d95bbe83d71210889d5e20ceaad366</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 18:58:02</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

@@ -58,10 +58,9 @@
         <record/>
         <record_producer_table>x_1593183_traini_0_training_enrollments</record_producer_table>
         <reference>x_1593183_traini_0_training_schedules</reference>
-        <reference_qual>answer = variables.course</reference_qual>
-        <reference_qual_condition table="x_1593183_traini_0_training_schedules">course=variables.course^EQ<item endquery="false" field="course" goto="false" newquery="false" operator="=" or="false" value="variables.course"/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
-        </reference_qual_condition>
+        <reference_qual>javascript:new x_1593183_traini_0.TrainingUtils().getEnrolledSchedules();&#13;
+</reference_qual>
+        <reference_qual_condition/>
         <rich_text/>
         <roles_to_use_also_request_for/>
         <save_script><![CDATA[/** This script is executed before the Record is generated
@@ -81,14 +80,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-27 20:05:48</sys_created_on>
         <sys_id>0acf5ae2831b1210889d5e20ceaad36b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Select a Schedule:</sys_name>
         <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name>item_option_new_0acf5ae2831b1210889d5e20ceaad36b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 14:30:05</sys_updated_on>
+        <sys_updated_on>2025-01-28 20:38:17</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
