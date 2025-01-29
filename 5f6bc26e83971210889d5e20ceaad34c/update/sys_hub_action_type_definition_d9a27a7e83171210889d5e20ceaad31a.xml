@@ -14,9 +14,9 @@
         <copied_from_name/>
         <description/>
         <flow_priority/>
-        <ih_action>false</ih_action>
+        <ih_action>true</ih_action>
         <internal_name>translate_api</internal_name>
-        <label_cache>[{"name":"{{action.text}}","label":"action➛Text","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.description}}","label":"action➛Description","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].endpoint}}","label":"step➛Script step➛EndPoint","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"02c4ada4-294d-48c8-ab3b-0994d56545c4"}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].apikey}}","label":"step➛Script step➛ApiKey","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"67c24b5e-deab-477e-8eca-b8eef1991bea"}},{"name":"{{step[f0e2e240-2ac1-40da-b688-6ccf992f3204].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD17ec7ebad0571210082174fdfc26c9b8","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"073b5649-d739-462d-aea3-fe83340e1b3f"}}]</label_cache>
+        <label_cache>[{"name":"{{action.text}}","label":"action➛Text","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.description}}","label":"action➛Description","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.body}}","label":"action➛body","type":"action","ref":"","reference_display":"","base_type":"multi_small","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].endpoint}}","label":"step➛Script step➛EndPoint","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"02c4ada4-294d-48c8-ab3b-0994d56545c4"}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].apikey}}","label":"step➛Script step➛ApiKey","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"67c24b5e-deab-477e-8eca-b8eef1991bea"}},{"name":"{{step[f0e2e240-2ac1-40da-b688-6ccf992f3204].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD17ec7ebad0571210082174fdfc26c9b8","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"073b5649-d739-462d-aea3-fe83340e1b3f"}}]</label_cache>
         <master_snapshot>e5ed363e83571210889d5e20ceaad35f</master_snapshot>
         <master_snapshot_digest/>
         <name>Translate API</name>
@@ -24,14 +24,14 @@
         <outputs/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <state>draft</state>
+        <state>published</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:06:42</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d9a27a7e83171210889d5e20ceaad31a</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name>Translate API</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_d9a27a7e83171210889d5e20ceaad31a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 17:22:13</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:51:48</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -128,10 +128,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:38:26</sys_created_on>
         <sys_id>82e97eb683571210889d5e20ceaad319</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 17:22:13</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:51:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=82e97eb683571210889d5e20ceaad319"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -226,13 +226,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:46:14</sys_created_on>
         <sys_id>9cbbf27a83571210889d5e20ceaad307</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 17:22:13</sys_updated_on>
-        <value>{
-    "target_lang":"en",
-    "text":
-}</value>
+        <sys_updated_on>2025-01-29 19:51:08</sys_updated_on>
+        <value/>
         <variable display_value="Request Body[Text]">6c6073f1c71003007b237f48cb97633b</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -308,11 +305,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:38:27</sys_created_on>
         <sys_id>92e97eb683571210889d5e20ceaad331</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 17:22:13</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:51:08</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
+        <value>{
+    "target_lang":"en",
+    "text": "{{action.description}}"
+}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>capabilities</field>
@@ -794,7 +794,7 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d7ec7eba83571210889d5e20ceaad3b8</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -802,7 +802,7 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 17:22:13</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:51:46</sys_updated_on>
         <type>complex_object_schema</type>
     </sys_complex_object>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
@@ -1238,14 +1238,14 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:23:46</sys_created_on>
         <sys_id>9b863eb283571210889d5e20ceaad304</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 17:22:13</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:51:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1372,17 +1372,17 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Translate API">d9a27a7e83171210889d5e20ceaad31a</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"daed763e83571210889d5e20ceaad335","name":"plan","plan_signature":null}}</plan>
-        <snapshot>8eed363e83571210889d5e20ceaad3d7</snapshot>
+        <snapshot>14cf6c5b83539210889d5e20ceaad3ea</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:55:55</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>daed763e83571210889d5e20ceaad335</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 16:55:55</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:51:49</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1399,7 +1399,7 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <description/>
         <flow_priority/>
         <internal_name>translate_api</internal_name>
-        <label_cache>[{"name":"{{action.text}}","label":"action➛Text","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.description}}","label":"action➛Description","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].endpoint}}","label":"step➛Script step➛EndPoint","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"02c4ada4-294d-48c8-ab3b-0994d56545c4"}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].apikey}}","label":"step➛Script step➛ApiKey","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"67c24b5e-deab-477e-8eca-b8eef1991bea"}},{"name":"{{step[f0e2e240-2ac1-40da-b688-6ccf992f3204].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD17ec7ebad0571210082174fdfc26c9b8","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"073b5649-d739-462d-aea3-fe83340e1b3f"}}]</label_cache>
+        <label_cache>[{"name":"{{action.text}}","label":"action➛Text","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.description}}","label":"action➛Description","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.body}}","label":"action➛body","type":"action","ref":"","reference_display":"","base_type":"multi_small","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].endpoint}}","label":"step➛Script step➛EndPoint","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"02c4ada4-294d-48c8-ab3b-0994d56545c4"}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].apikey}}","label":"step➛Script step➛ApiKey","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"67c24b5e-deab-477e-8eca-b8eef1991bea"}},{"name":"{{step[f0e2e240-2ac1-40da-b688-6ccf992f3204].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD17ec7ebad0571210082174fdfc26c9b8","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"073b5649-d739-462d-aea3-fe83340e1b3f"}}]</label_cache>
         <master>true</master>
         <name>Translate API</name>
         <natlang/>
@@ -1412,7 +1412,7 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e5ed363e83571210889d5e20ceaad35f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1420,7 +1420,7 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 16:55:52</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:51:47</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1782,10 +1782,10 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:55:53</sys_created_on>
         <sys_id>b1ed363e83571210889d5e20ceaad38c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 16:55:53</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:51:48</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b1ed363e83571210889d5e20ceaad38c"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1880,13 +1880,10 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:55:53</sys_created_on>
         <sys_id>bded363e83571210889d5e20ceaad3a2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 16:55:53</sys_updated_on>
-        <value>{
-    "target_lang":"en",
-    "text":"Olá, este é um curso para quem nunca teve contato com o Python."
-}</value>
+        <sys_updated_on>2025-01-29 19:51:48</sys_updated_on>
+        <value/>
         <variable display_value="Request Body[Text]">6c6073f1c71003007b237f48cb97633b</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1962,11 +1959,14 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:55:53</sys_created_on>
         <sys_id>bded363e83571210889d5e20ceaad3a0</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 16:55:53</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:51:48</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
+        <value>{
+    "target_lang":"en",
+    "text": "{{action.description}}"
+}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>capabilities</field>
@@ -2175,7 +2175,7 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>71ed363e83571210889d5e20ceaad3b7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -2183,7 +2183,7 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 16:55:53</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:51:48</sys_updated_on>
         <type>complex_object_schema</type>
     </sys_complex_object>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
@@ -2532,14 +2532,14 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:55:54</sys_created_on>
         <sys_id>4aed363e83571210889d5e20ceaad3cb</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 16:55:54</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:51:48</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
