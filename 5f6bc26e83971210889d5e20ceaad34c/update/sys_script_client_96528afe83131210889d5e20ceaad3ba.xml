@@ -14,24 +14,31 @@
     if (isLoading || newValue == '') {
         return;
     }
+(function executeRule(current, gForm, gSNC) {
+    function checkDateConflict() {
+        var curso = gForm.getValue('course');  // Substitua pelo nome correto do campo
+        var dataTreinamento = gForm.getValue('training_date');
 
-    var courseId = g_form.getValue('course');  // Obtém o ID do curso
-    var scheduleDate = newValue;  // Obtém a nova data selecionada
-
-    var ga = new GlideAjax('ScheduleUtils');  // Nome do Script Include
-    ga.addParam('sysparm_name', 'checkScheduleConflict');  // Função a ser chamada no Script Include
-    ga.addParam('sysparm_course_id', courseId);  
-    ga.addParam('sysparm_schedule_date', scheduleDate);  
-
-    ga.getXMLAnswer(function(response) {
-        var result = response;  
-
-        if (result == 'false') {
-            g_form.addErrorMessage( 'Já existe um schedule para este curso nesta data.', 'error');
-			g_form.clearMessages();
-            
+        if (!curso || !dataTreinamento) {
+            return;
         }
-    });
+
+        var ga = new GlideAjax('CheckTrainingDate');
+        ga.addParam('sysparm_name', 'checkDateConflict');
+        ga.addParam('sysparm_curso', curso);
+        ga.addParam('sysparm_data', dataTreinamento);
+
+        ga.getXMLAnswer(function(response) {
+            if (response == "conflict") {
+                gForm.clearValue('training_date');  // Limpa a data inválida
+                gForm.addErrorMessage('Já existe um treinamento para esse curso nessa data. Escolha outra.');
+            }
+        });
+    }
+
+    checkDateConflict();
+})(current, gForm, gSNC);
+
 }
 ]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -40,7 +47,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>96528afe83131210889d5e20ceaad3ba</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Validate Training Date</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
@@ -48,7 +55,7 @@
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name>sys_script_client_96528afe83131210889d5e20ceaad3ba</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 17:36:01</sys_updated_on>
+        <sys_updated_on>2025-01-29 20:51:20</sys_updated_on>
         <table>x_1593183_traini_0_training_schedules</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
