@@ -4,83 +4,111 @@
             <element>course</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-27 19:33:41</sys_created_on>
-            <sys_id>6f6892ae83d71210889d5e20ceaad301</sys_id>
+            <sys_created_on>2025-01-29 16:08:12</sys_created_on>
+            <sys_id>099c338b835f5210889d5e20ceaad3cc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1593183_traini_0_training_schedules" sys_domain="global" view="Default view">9321d66283d71210889d5e20ceaad3f7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-27 19:33:41</sys_updated_on>
+            <sys_updated_on>2025-01-29 16:08:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>training_date</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-29 16:08:12</sys_created_on>
+            <sys_id>8d9c338b835f5210889d5e20ceaad3cc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1593183_traini_0_training_schedules" sys_domain="global" view="Default view">9321d66283d71210889d5e20ceaad3f7</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-29 16:08:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>instructor</element>
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-27 19:33:41</sys_created_on>
-            <sys_id>e36892ae83d71210889d5e20ceaad302</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1593183_traini_0_training_schedules" sys_domain="global" view="Default view">9321d66283d71210889d5e20ceaad3f7</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-27 19:33:41</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-27 19:33:41</sys_created_on>
-            <sys_id>6b6892ae83d71210889d5e20ceaad302</sys_id>
+            <sys_created_on>2025-01-29 16:08:12</sys_created_on>
+            <sys_id>059c338b835f5210889d5e20ceaad3cd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1593183_traini_0_training_schedules" sys_domain="global" view="Default view">9321d66283d71210889d5e20ceaad3f7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-27 19:33:41</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>training_date</element>
-            <position>3</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-27 19:33:41</sys_created_on>
-            <sys_id>ef6892ae83d71210889d5e20ceaad302</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1593183_traini_0_training_schedules" sys_domain="global" view="Default view">9321d66283d71210889d5e20ceaad3f7</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-27 19:33:41</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>seats_available</element>
-            <position>4</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-27 19:33:41</sys_created_on>
-            <sys_id>676892ae83d71210889d5e20ceaad303</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1593183_traini_0_training_schedules" sys_domain="global" view="Default view">9321d66283d71210889d5e20ceaad3f7</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-27 19:33:41</sys_updated_on>
+            <sys_updated_on>2025-01-29 16:08:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>full_display_value</element>
-            <position>5</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-28 18:56:43</sys_created_on>
-            <sys_id>b3899f7e83d71210889d5e20ceaad347</sys_id>
+            <sys_created_on>2025-01-29 16:08:12</sys_created_on>
+            <sys_id>899c338b835f5210889d5e20ceaad3cd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1593183_traini_0_training_schedules" sys_domain="global" view="Default view">9321d66283d71210889d5e20ceaad3f7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-28 18:56:43</sys_updated_on>
+            <sys_updated_on>2025-01-29 16:08:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-29 16:08:12</sys_created_on>
+            <sys_id>019c338b835f5210889d5e20ceaad3ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1593183_traini_0_training_schedules" sys_domain="global" view="Default view">9321d66283d71210889d5e20ceaad3f7</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-29 16:08:12</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-29 16:08:12</sys_created_on>
+            <sys_id>859c338b835f5210889d5e20ceaad3ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1593183_traini_0_training_schedules" sys_domain="global" view="Default view">9321d66283d71210889d5e20ceaad3f7</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-29 16:08:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>seats_available</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-29 16:08:12</sys_created_on>
+            <sys_id>0d9c338b835f5210889d5e20ceaad3ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1593183_traini_0_training_schedules" sys_domain="global" view="Default view">9321d66283d71210889d5e20ceaad3f7</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-29 16:08:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>max_students</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-01-29 16:08:12</sys_created_on>
+            <sys_id>819c338b835f5210889d5e20ceaad3cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1593183_traini_0_training_schedules" sys_domain="global" view="Default view">9321d66283d71210889d5e20ceaad3f7</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-01-29 16:08:12</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

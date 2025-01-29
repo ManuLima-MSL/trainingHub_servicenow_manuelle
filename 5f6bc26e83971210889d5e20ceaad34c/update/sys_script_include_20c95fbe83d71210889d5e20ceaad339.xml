@@ -14,15 +14,58 @@ var TrainingUtils = Class.create();
 TrainingUtils.prototype = {
     initialize: function() {},
 
-    getEnrolledSchedules: function(userId) {  // Aceita o userId como parâmetro
+    refQualSchedules: function(userId, scheduleId) {
+
         var enrolledSchedules = [];
         var grEnrollment = new GlideRecord("x_1593183_traini_0_training_enrollments");
-        grEnrollment.addQuery("user", userId); // Usa o userId fornecido
+        grEnrollment.addEncodedQuery("opened_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe");
         grEnrollment.query();
         while (grEnrollment.next()) {
-            enrolledSchedules.push(grEnrollment.schedule.toString()); // Adiciona o sys_id da agenda
+            enrolledSchedules.push(grEnrollment.schedule.sys_id.toString());
         }
-        return enrolledSchedules;
+
+        gs.info("to na linha 15");
+        var availableSchedules = [];
+        var grSchedules = new GlideRecord("x_1593183_traini_0_training_schedules");
+        grSchedules.addQuery("status", "1");
+        grSchedules.query();
+        while (grSchedules.next()) {
+            if (enrolledSchedules.indexOf(grSchedules.getUniqueValue()) == -1) {
+				var courseId = grSchedules.getValue('course');
+                var instructorId = grSchedules.getValue('instructor');
+                var trainingDate = grSchedules.training_date;
+                availableSchedules.push(grSchedules.getUniqueValue());
+                gs.info("Adicionando schedule ID: " + grSchedules.getUniqueValue());
+            }
+        }
+        gs.info("Course ID: " + grSchedules.course);
+        gs.info("to na linha 26");
+        var courseCheck = new GlideRecord("x_1593183_traini_0_training_enrollments");
+        courseCheck.addQuery("opened_by", userId);
+        courseCheck.addQuery("course", courseId);
+        courseCheck.query();
+        var count = 0;
+        while (courseCheck.next()) {
+            count++;
+            if (count >= 3) {
+                return false;
+            }
+        }
+
+        gs.info("to na linha 59");
+        if (instructorId == userId) {
+            return false;
+        }
+
+        gs.info("to na linha 64");
+        var date = new GlideDateTime(trainingDate);
+        var today = new GlideDateTime();
+        today.addDaysUTC(1);
+        if (today.compareTo(date) >= 0) {
+            return false;
+        }
+        gs.info("Available Schedules: " + availableSchedules.join(","));
+        return "sys_idIN" + availableSchedules.join(",");
     },
 
     type: 'TrainingUtils'
@@ -31,14 +74,14 @@ TrainingUtils.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 18:58:02</sys_created_on>
         <sys_id>20c95fbe83d71210889d5e20ceaad339</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>TrainingUtils</sys_name>
         <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name>sys_script_include_20c95fbe83d71210889d5e20ceaad339</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 20:33:30</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:30:56</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>20c95fbe83d71210889d5e20ceaad339</id>

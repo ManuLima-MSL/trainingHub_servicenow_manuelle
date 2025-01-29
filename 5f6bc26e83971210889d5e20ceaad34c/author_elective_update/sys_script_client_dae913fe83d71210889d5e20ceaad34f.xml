@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Schedules display name </name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+    var courseName = g_form.getDisplayValue();
+    var trainingDate = g_form.getValue('training_date');
+
+    if (courseName && trainingDate) {
+        var displayValue = courseName + ' - ' + trainingDate;
+        g_form.setValue('full_display_value', displayValue);
+    }
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 18:59:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dae913fe83d71210889d5e20ceaad34f</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Schedules display name </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
+        <sys_update_name>sys_script_client_dae913fe83d71210889d5e20ceaad34f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 19:38:13</sys_updated_on>
+        <table>x_1593183_traini_0_training_schedules</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</application>
+        <file_path/>
+        <instance_id>f5cdcc2bdbb84e98ebdd2a5913961933</instance_id>
+        <instance_name>dev241981</instance_name>
+        <name>sys_script_client_dae913fe83d71210889d5e20ceaad34f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Schedules display name &lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+    var courseName = g_form.getDisplayValue();
+    var trainingDate = g_form.getValue('training_date');
+
+    if (courseName &amp;&amp; trainingDate) {
+        var displayValue = courseName + ' - ' + trainingDate;
+        g_form.setValue('full_display_value', displayValue);
+    }
+}
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-28 18:59:16&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;dae913fe83d71210889d5e20ceaad34f&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;Schedules display name &lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Training Hub" source="x_1593183_traini_0"&gt;5f6bc26e83971210889d5e20ceaad34c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Training Hub"&gt;5f6bc26e83971210889d5e20ceaad34c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_dae913fe83d71210889d5e20ceaad34f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-28 19:38:13&lt;/sys_updated_on&gt;&lt;table&gt;x_1593183_traini_0_training_schedules&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1902825033</payload_hash>
+        <record_name>Schedules display name </record_name>
+        <reverted_from/>
+        <source>edb6d2fa83931210889d5e20ceaad36a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 19:38:14</sys_created_on>
+        <sys_id>3703a7ba831b1210889d5e20ceaad39d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194ae6be4c20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 19:38:14</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>bb03a7bae71b121008b2c7183cbee19c</update_guid>
+        <update_guid_history>bb03a7bae71b121008b2c7183cbee19c:1902825033,82e2e3bad81b1210d8f8fad50a561d66:-1057071040,1db2ef7a5a1b1210dd605d8c8c49b02b:1903411963,c7d0ab76101b12107e54bd9527dc5939:-1648563982,c2b0a776c21b12107e18c4745c31dd6b:-1469911316,9bee5f36a71b12108bd89a4e82d8ab85:-513984316,012a937e56d71210273fef7fba34ad83:-556435714</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-29 16:08:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>8cd45c6b6be1485c9c11856325918090</sys_id>
+        <sys_metadata>dae913fe83d71210889d5e20ceaad34f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Schedules display name </sys_name>
+        <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
+        <sys_parent display_value="Training Schedules">3e21162683d71210889d5e20ceaad38e</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
+        <sys_scope_delete display_value="">1206a1b050ee40c4859c00547ee34090</sys_scope_delete>
+        <sys_update_name>sys_script_client_dae913fe83d71210889d5e20ceaad34f</sys_update_name>
+        <sys_update_version display_value="sys_script_client_dae913fe83d71210889d5e20ceaad34f">3703a7ba831b1210889d5e20ceaad39d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-29 16:08:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

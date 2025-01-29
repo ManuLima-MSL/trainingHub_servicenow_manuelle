@@ -10,28 +10,29 @@
         <messages/>
         <name>Validate Training Date</name>
         <order/>
-        <script><![CDATA[// Nome do campo que dispara o evento onChange: 'data'
-function onChange(control, oldValue, newValue, isLoading) {
-    if (isLoading || newValue === '') {
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') {
         return;
     }
 
-    var cursoId = g_form.getValue('course'); // Obtém o curso do formulário
-    var dataTreinamento = newValue; // Nova data selecionada
+    var courseId = g_form.getValue('course');  // Obtém o ID do curso
+    var scheduleDate = newValue;  // Obtém a nova data selecionada
 
-    var ga = new GlideAjax('TrainingValidator');
-    ga.addParam('sysparm_name', 'isTrainingDateAvailable');
-    ga.addParam('course', cursoId);
-    ga.addParam('training_date', dataTreinamento);
+    var ga = new GlideAjax('ScheduleUtils');  // Nome do Script Include
+    ga.addParam('sysparm_name', 'checkScheduleConflict');  // Função a ser chamada no Script Include
+    ga.addParam('sysparm_course_id', courseId);  
+    ga.addParam('sysparm_schedule_date', scheduleDate);  
 
     ga.getXMLAnswer(function(response) {
-        if (response === 'false') {
-            g_form.addErrorMessage('Já existe um treinamento deste curso programado para esta data.');
-            g_form.clearValue('training_date'); // Limpa o campo se a data for inválida
+        var result = response;  
+
+        if (result == 'false') {
+            g_form.addErrorMessage( 'Já existe um schedule para este curso nesta data.', 'error');
+			g_form.clearMessages();
+            
         }
     });
 }
-
 ]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -39,7 +40,7 @@ function onChange(control, oldValue, newValue, isLoading) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>96528afe83131210889d5e20ceaad3ba</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Validate Training Date</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
@@ -47,7 +48,7 @@ function onChange(control, oldValue, newValue, isLoading) {
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name>sys_script_client_96528afe83131210889d5e20ceaad3ba</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 18:19:00</sys_updated_on>
+        <sys_updated_on>2025-01-29 17:36:01</sys_updated_on>
         <table>x_1593183_traini_0_training_schedules</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
