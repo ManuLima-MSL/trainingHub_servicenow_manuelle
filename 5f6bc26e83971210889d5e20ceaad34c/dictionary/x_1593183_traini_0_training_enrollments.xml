@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="82039aa683d71210889d5e20ceaad37e" extends="task" label="Training Enrollments" max_length="40" name="x_1593183_traini_0_training_enrollments" type="collection">
-        <element label="Schedule" max_length="32" name="schedule" reference="x_1593183_traini_0_training_schedules" type="reference"/>
+    <element attributes="hasLabels=true" db_object_id="82039aa683d71210889d5e20ceaad37e" extends="task" label="Training Enrollments" max_length="40" name="x_1593183_traini_0_training_enrollments" type="collection">
+        <element dependent="course" dependent_on_field="course" label="Schedule" max_length="32" name="schedule" reference="x_1593183_traini_0_training_schedules" reference_floats="true" type="reference" use_dependent_field="true"/>
         <element label="Reproval Reason" max_length="1000" name="reproval_reason" type="string"/>
         <element label="Course" max_length="32" name="course" reference="x_1593183_traini_0_training_courses" type="reference"/>
     </element>

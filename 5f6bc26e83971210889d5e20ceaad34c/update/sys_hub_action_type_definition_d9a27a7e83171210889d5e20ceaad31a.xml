@@ -16,7 +16,7 @@
         <flow_priority/>
         <ih_action>true</ih_action>
         <internal_name>translate_api</internal_name>
-        <label_cache>[{"name":"{{action.text}}","label":"action➛Text","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.description}}","label":"action➛Description","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.body}}","label":"action➛body","type":"action","ref":"","reference_display":"","base_type":"multi_small","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].endpoint}}","label":"step➛Script step➛EndPoint","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"02c4ada4-294d-48c8-ab3b-0994d56545c4"}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].apikey}}","label":"step➛Script step➛ApiKey","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"67c24b5e-deab-477e-8eca-b8eef1991bea"}},{"name":"{{step[f0e2e240-2ac1-40da-b688-6ccf992f3204].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD17ec7ebad0571210082174fdfc26c9b8","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"073b5649-d739-462d-aea3-fe83340e1b3f"}}]</label_cache>
+        <label_cache>[{"name":"{{action.text}}","label":"action➛Text","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.description}}","label":"action➛Description","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.body}}","label":"action➛body","type":"action","ref":"","reference_display":"","base_type":"multi_small","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].endpoint}}","label":"step➛Script step➛EndPoint","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"02c4ada4-294d-48c8-ab3b-0994d56545c4"}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].apikey}}","label":"step➛Script step➛ApiKey","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"67c24b5e-deab-477e-8eca-b8eef1991bea"}},{"name":"{{step[f0e2e240-2ac1-40da-b688-6ccf992f3204].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD17ec7ebad0571210082174fdfc26c9b8","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"073b5649-d739-462d-aea3-fe83340e1b3f"}},{"name":"{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root.translatedText}}","label":"step➛JSON Parser step➛root➛translatedText","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
         <master_snapshot>e5ed363e83571210889d5e20ceaad35f</master_snapshot>
         <master_snapshot_digest/>
         <name>Translate API</name>
@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d9a27a7e83171210889d5e20ceaad31a</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name>Translate API</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_d9a27a7e83171210889d5e20ceaad31a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 19:51:48</sys_updated_on>
+        <sys_updated_on>2025-01-30 16:47:56</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -80,11 +80,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:38:27</sys_created_on>
         <sys_id>a2e97eb683571210889d5e20ceaad359</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 16:53:01</sys_updated_on>
+        <sys_updated_on>2025-01-30 16:46:27</sys_updated_on>
         <table>var__m_sys_hub_action_output_d9a27a7e83171210889d5e20ceaad31a</table>
-        <value>{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root}}</value>
+        <value>{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root.translatedText}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>__action_status__</field>
@@ -784,17 +784,17 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
     <sys_hub_step_ext_output action="delete_multiple" query="model=d6e97eb683571210889d5e20ceaad337^sys_idNOT INdae97eb683571210889d5e20ceaad33c"/>
     <sys_complex_object action="INSERT_OR_UPDATE">
         <label/>
-        <name>FD17ec7ebad0571210082174fdfc26c9b8</name>
+        <name>FD63bdc1a32bd7d210883114940b6445cb</name>
         <namespace>FlowDesigner</namespace>
         <scope_name>5f6bc26e83971210889d5e20ceaad34c</scope_name>
-        <serialized_content>{"FlowDesigner:FD17ec7ebad0571210082174fdfc26c9b8":{"translatedText":"String","translatedText.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"translatedText\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"134dbec2-c8b5-4915-aed2-ecac4d360a1a\"}"}},"FlowDesigner:FD17ec7ebad0571210082174fdfc26c9b8.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"root\",\"mandatory\":\"false\",\"uiUniqueId\":\"073b5649-d739-462d-aea3-fe83340e1b3f\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD17ec7ebad0571210082174fdfc26c9b8\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}</serialized_content>
+        <serialized_content>{"FlowDesigner:FD63bdc1a32bd7d210883114940b6445cb":{"translatedText":"String","translatedText.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"translatedText\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"2ff5a430-0369-49cc-a535-15c5c1e6e242\"}"}},"FlowDesigner:FD63bdc1a32bd7d210883114940b6445cb.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"root\",\"mandatory\":\"false\",\"uiUniqueId\":\"506d2393-5054-488f-acf9-2f41d83ca0b4\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD63bdc1a32bd7d210883114940b6445cb\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}</serialized_content>
         <sys_class_name>sys_complex_object</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-01-28 16:51:37</sys_created_on>
+        <sys_created_on>2025-01-30 16:41:18</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>d7ec7eba83571210889d5e20ceaad3b8</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_id>27bdc1a383d7d210889d5e20ceaad3cb</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -802,14 +802,14 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 19:51:46</sys_updated_on>
+        <sys_updated_on>2025-01-30 16:47:53</sys_updated_on>
         <type>complex_object_schema</type>
     </sys_complex_object>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>co_type_name=FD17ec7ebad0571210082174fdfc26c9b8,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=073b5649-d739-462d-aea3-fe83340e1b3f</attributes>
+        <attributes>co_type_name=FD63bdc1a32bd7d210883114940b6445cb,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=506d2393-5054-488f-acf9-2f41d83ca0b4</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -868,14 +868,14 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:38:27</sys_created_on>
         <sys_id>dae97eb683571210889d5e20ceaad33c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 16:51:37</sys_updated_on>
+        <sys_updated_on>2025-01-30 16:41:18</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1238,14 +1238,14 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:23:46</sys_created_on>
         <sys_id>9b863eb283571210889d5e20ceaad304</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 19:51:46</sys_updated_on>
+        <sys_updated_on>2025-01-30 16:47:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1372,17 +1372,17 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Translate API">d9a27a7e83171210889d5e20ceaad31a</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"daed763e83571210889d5e20ceaad335","name":"plan","plan_signature":null}}</plan>
-        <snapshot>14cf6c5b83539210889d5e20ceaad3ea</snapshot>
+        <snapshot>f84f092783d7d210889d5e20ceaad3dd</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:55:55</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>daed763e83571210889d5e20ceaad335</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 19:51:49</sys_updated_on>
+        <sys_updated_on>2025-01-30 16:47:57</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1399,7 +1399,7 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <description/>
         <flow_priority/>
         <internal_name>translate_api</internal_name>
-        <label_cache>[{"name":"{{action.text}}","label":"action➛Text","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.description}}","label":"action➛Description","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.body}}","label":"action➛body","type":"action","ref":"","reference_display":"","base_type":"multi_small","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].endpoint}}","label":"step➛Script step➛EndPoint","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"02c4ada4-294d-48c8-ab3b-0994d56545c4"}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].apikey}}","label":"step➛Script step➛ApiKey","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"67c24b5e-deab-477e-8eca-b8eef1991bea"}},{"name":"{{step[f0e2e240-2ac1-40da-b688-6ccf992f3204].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD17ec7ebad0571210082174fdfc26c9b8","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"073b5649-d739-462d-aea3-fe83340e1b3f"}}]</label_cache>
+        <label_cache>[{"name":"{{action.text}}","label":"action➛Text","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.description}}","label":"action➛Description","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.body}}","label":"action➛body","type":"action","ref":"","reference_display":"","base_type":"multi_small","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].endpoint}}","label":"step➛Script step➛EndPoint","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"02c4ada4-294d-48c8-ab3b-0994d56545c4"}},{"name":"{{step[2c708509-9819-4912-a9f1-1b65b13be597].apikey}}","label":"step➛Script step➛ApiKey","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"67c24b5e-deab-477e-8eca-b8eef1991bea"}},{"name":"{{step[f0e2e240-2ac1-40da-b688-6ccf992f3204].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Object","co_type_name":"FD17ec7ebad0571210082174fdfc26c9b8","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","uiUniqueId":"073b5649-d739-462d-aea3-fe83340e1b3f"}},{"name":"{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root.translatedText}}","label":"step➛JSON Parser step➛root➛translatedText","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
         <master>true</master>
         <name>Translate API</name>
         <natlang/>
@@ -1412,7 +1412,7 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e5ed363e83571210889d5e20ceaad35f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1420,7 +1420,7 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 19:51:47</sys_updated_on>
+        <sys_updated_on>2025-01-30 16:47:55</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1461,11 +1461,11 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:55:54</sys_created_on>
         <sys_id>0aed363e83571210889d5e20ceaad3d5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 16:55:54</sys_updated_on>
+        <sys_updated_on>2025-01-30 16:47:56</sys_updated_on>
         <table>var__m_sys_hub_action_output_e5ed363e83571210889d5e20ceaad35f</table>
-        <value>{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root}}</value>
+        <value>{{step[c69f56b9-b7e6-432f-bfaf-9da68945e762].root.translatedText}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>__action_status__</field>
@@ -2168,14 +2168,14 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <name>FDbded363ece571210ae95567f31b60db6</name>
         <namespace>FlowDesigner</namespace>
         <scope_name>5f6bc26e83971210889d5e20ceaad34c</scope_name>
-        <serialized_content>{"FlowDesigner:FDbded363ece571210ae95567f31b60db6":{"translatedText":"String","translatedText.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"translatedText\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"134dbec2-c8b5-4915-aed2-ecac4d360a1a\"}"}},"FlowDesigner:FDbded363ece571210ae95567f31b60db6.$type_facets":{"SimpleMapFacet":"{\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"root\",\"mandatory\":\"false\",\"uiUniqueId\":\"073b5649-d739-462d-aea3-fe83340e1b3f\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDbded363ece571210ae95567f31b60db6\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}</serialized_content>
+        <serialized_content>{"FlowDesigner:FDbded363ece571210ae95567f31b60db6":{"translatedText":"String","translatedText.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"translatedText\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"2ff5a430-0369-49cc-a535-15c5c1e6e242\"}"}},"FlowDesigner:FDbded363ece571210ae95567f31b60db6.$type_facets":{"SimpleMapFacet":"{\"choiceOption\":\"\",\"default_value\":\"\",\"label\":\"root\",\"mandatory\":\"false\",\"uiUniqueId\":\"506d2393-5054-488f-acf9-2f41d83ca0b4\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDbded363ece571210ae95567f31b60db6\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}</serialized_content>
         <sys_class_name>sys_complex_object</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:55:53</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>71ed363e83571210889d5e20ceaad3b7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -2183,14 +2183,14 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 19:51:48</sys_updated_on>
+        <sys_updated_on>2025-01-30 16:47:56</sys_updated_on>
         <type>complex_object_schema</type>
     </sys_complex_object>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>co_type_name=FDbded363ece571210ae95567f31b60db6,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=073b5649-d739-462d-aea3-fe83340e1b3f</attributes>
+        <attributes>co_type_name=FDbded363ece571210ae95567f31b60db6,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=506d2393-5054-488f-acf9-2f41d83ca0b4</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -2249,14 +2249,14 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:55:53</sys_created_on>
         <sys_id>bded363e83571210889d5e20ceaad3b7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 16:55:53</sys_updated_on>
+        <sys_updated_on>2025-01-30 16:42:09</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2532,14 +2532,14 @@ outputs.endpoint = gs.getProperty("x_1593183_traini_0.integration_endPoint");&#1
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 16:55:54</sys_created_on>
         <sys_id>4aed363e83571210889d5e20ceaad3cb</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 19:51:48</sys_updated_on>
+        <sys_updated_on>2025-01-30 16:47:56</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

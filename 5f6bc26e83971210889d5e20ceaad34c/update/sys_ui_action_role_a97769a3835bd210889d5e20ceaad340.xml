@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action_role">
+    <sys_ui_action_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ui_action_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-30 18:33:54</sys_created_on>
+        <sys_id>a97769a3835bd210889d5e20ceaad340</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Manage Enrollments Status.x_1593183_traini_0.admin</sys_name>
+        <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
+        <sys_ui_action display_value="Manage Enrollments Status">4ac55d2f83d7d210889d5e20ceaad3c4</sys_ui_action>
+        <sys_update_name>sys_ui_action_role_a97769a3835bd210889d5e20ceaad340</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-30 18:33:54</sys_updated_on>
+        <sys_user_role display_value="x_1593183_traini_0.admin" name="x_1593183_traini_0.admin">676bc26e83971210889d5e20ceaad36d</sys_user_role>
+    </sys_ui_action_role>
+</record_update>

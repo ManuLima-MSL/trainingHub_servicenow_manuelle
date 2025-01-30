@@ -89,14 +89,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-27 19:53:33</sys_created_on>
         <sys_id>1f8c5ee2831b1210889d5e20ceaad380</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>81</sys_mod_count>
         <sys_name>Enroll in a Training</sys_name>
         <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name>sc_cat_item_producer_1f8c5ee2831b1210889d5e20ceaad380</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2025-01-29 18:19:37</sys_updated_on>
+        <sys_updated_on>2025-01-30 20:01:40</sys_updated_on>
         <table_name>x_1593183_traini_0_training_enrollments</table_name>
         <taxonomy_topic/>
         <template/>
@@ -104,7 +104,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>43</version>
+        <version>81</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

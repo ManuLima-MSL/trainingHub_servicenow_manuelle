@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>training_date</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate Training Date</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') {
+        return;
+    }
+        }
+        var ga = new GlideAjax('CheckTrainingDate');
+        ga.addParam('sysparm_name', 'checkDateConflict');
+        ga.addParam('sysparm_course', g_form.getValue("course"));
+        ga.addParam('sysparm_date', g_form.getValue("training_date"));
+
+        ga.getXMLAnswer(function(response) {
+            if (response == "conflict") {
+                g_form.clearValue('training_date');  // Limpa a data inválida
+                g_form.addErrorMessage('Já existe um treinamento para esse curso nessa data. Escolha outra.');
+            }
+        });
+   
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 12:46:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>96528afe83131210889d5e20ceaad3ba</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Validate Training Date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
+        <sys_update_name>sys_script_client_96528afe83131210889d5e20ceaad3ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-29 23:24:56</sys_updated_on>
+        <table>x_1593183_traini_0_training_schedules</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</application>
+        <file_path/>
+        <instance_id>f5cdcc2bdbb84e98ebdd2a5913961933</instance_id>
+        <instance_name>dev241981</instance_name>
+        <name>sys_script_client_96528afe83131210889d5e20ceaad3ba</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;training_date&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Validate Training Date&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') {
+        return;
+    }
+        }
+        var ga = new GlideAjax('CheckTrainingDate');
+        ga.addParam('sysparm_name', 'checkDateConflict');
+        ga.addParam('sysparm_course', g_form.getValue("course"));
+        ga.addParam('sysparm_date', g_form.getValue("training_date"));
+
+        ga.getXMLAnswer(function(response) {
+            if (response == "conflict") {
+                g_form.clearValue('training_date');  // Limpa a data inválida
+                g_form.addErrorMessage('Já existe um treinamento para esse curso nessa data. Escolha outra.');
+            }
+        });
+   
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-28 12:46:18&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;96528afe83131210889d5e20ceaad3ba&lt;/sys_id&gt;&lt;sys_mod_count&gt;16&lt;/sys_mod_count&gt;&lt;sys_name&gt;Validate Training Date&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Training Hub" source="x_1593183_traini_0"&gt;5f6bc26e83971210889d5e20ceaad34c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Training Hub"&gt;5f6bc26e83971210889d5e20ceaad34c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_96528afe83131210889d5e20ceaad3ba&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-29 23:24:56&lt;/sys_updated_on&gt;&lt;table&gt;x_1593183_traini_0_training_schedules&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>123692610</payload_hash>
+        <record_name>Validate Training Date</record_name>
+        <reverted_from/>
+        <source>846473fe835b1210889d5e20ceaad36e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-29 23:24:56</sys_created_on>
+        <sys_id>2a80695783579210889d5e20ceaad3d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194b461cf640000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-29 23:24:56</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>ae806957be579210b66e7a0bdddc1ed0</update_guid>
+        <update_guid_history>ae806957be579210b66e7a0bdddc1ed0:123692610,0950e5939e5792105330365bdcba8ee8:-626085413,e0dd111308579210c1c97c00cc9c30a3:-1357926733,6d8b59dfa317921057ebd1b343aad50a:-1142934193,a9ba199fd8179210504704fb558f5895:-398044820,e06d709bb5939210aa6e6ac97efcd727:-775742672,d7a0dc539edf52106e8d3bebb06638ff:759076976,ed1b4cdba69f5210734709aa8dcf4ecb:-1568639351,17e01ff2c5d71210f0dfcc2978d41ec0:-585598764,8cb01b32afd71210ff59f1b939079c0e:-1487481743,e5ec03fe22971210ab8bef10a742617a:1057806990,a74ccffa34971210adb8c13bdf74dd63:1760789208,719f8ab27c931210e82d1b2880029504:357063628,3c0ec232859312102ffd05400fe4f85b:-1666357697,9f09c67a525312101f8f3422bc0fdea4:450876426,b5e7caf685531210dafd5edd65990562:-2082623002,39c48af20f5312104bbe4a960cc0576d:587398535</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-30 19:23:47</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>085de0be4fc545c9886db50de3c97811</sys_id>
+        <sys_metadata>96528afe83131210889d5e20ceaad3ba</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Training Date</sys_name>
+        <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
+        <sys_parent display_value="Training Schedules">3e21162683d71210889d5e20ceaad38e</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
+        <sys_scope_delete display_value="">1206a1b050ee40c4859c00547ee34090</sys_scope_delete>
+        <sys_update_name>sys_script_client_96528afe83131210889d5e20ceaad3ba</sys_update_name>
+        <sys_update_version display_value="sys_script_client_96528afe83131210889d5e20ceaad3ba">2a80695783579210889d5e20ceaad3d1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-30 19:23:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
