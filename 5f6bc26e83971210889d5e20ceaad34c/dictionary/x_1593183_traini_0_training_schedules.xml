@@ -10,7 +10,7 @@
             </choice>
         </element>
         <element label="Training Date" max_length="40" name="training_date" type="glide_date"/>
-        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;    return current.course.name + ' - ' + current.training_date;&#13;&#10;})(current);" display="true" label="Full Display Value" max_length="500" name="full_display_value" type="string" virtual="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;    return current.course.name + ' - ' + current.training_date;&#13;&#10;})(current);" display="true" label="Full Name" max_length="500" name="full_display_value" type="string" virtual="true"/>
         <element label="Max Students" max_length="40" name="max_students" type="integer"/>
         <index name="index">
             <element name="course"/>

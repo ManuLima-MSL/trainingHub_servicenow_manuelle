@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="full_display_value" label="Full Display Value" language="en" table="x_1593183_traini_0_training_schedules">
+    <sys_documentation element="full_display_value" label="Full Name" language="en" table="x_1593183_traini_0_training_schedules">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>full_display_value</element>
             <help/>
             <hint/>
-            <label>Full Display Value</label>
+            <label>Full Name</label>
             <language>en</language>
             <name>x_1593183_traini_0_training_schedules</name>
-            <plural>Full Display Values</plural>
+            <plural>Full Names</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2025-01-28 18:56:44</sys_created_on>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_name>Full Display Value</sys_name>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Full Name</sys_name>
             <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
             <sys_policy/>
             <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
             <sys_update_name>sys_documentation_x_1593183_traini_0_training_schedules_full_display_value_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-28 18:56:44</sys_updated_on>
+            <sys_updated_on>2025-01-31 20:32:08</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>
