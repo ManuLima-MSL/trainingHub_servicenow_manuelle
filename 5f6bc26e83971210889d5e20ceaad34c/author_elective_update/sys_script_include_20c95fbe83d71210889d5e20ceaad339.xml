@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1593183_traini_0.TrainingUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>TrainingUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var TrainingUtils = Class.create();
+TrainingUtils.prototype = {
+    initialize: function() {},
+
+    refQualTraining: function(userId) {
+        var notShowSchedules = [];
+        var availableSchedules = [];
+
+        // Pega a data atual (sem a parte da hora)
+        var today = new GlideDateTime(); // Pega data e hora atuais
+        today = today.getDate(); // Extrai apenas a data (sem a parte da hora)
+
+        var scheduleQuery = new GlideRecord('x_1593183_traini_0_training_schedules');
+        scheduleQuery.addQuery('training_date', '>=', today); // Compara apenas com a data (sem hora)
+        scheduleQuery.query();
+
+        while (scheduleQuery.next()) {
+            var scheduleId = scheduleQuery.getUniqueValue(); // sys_id do treinamento
+            var maxSeats = scheduleQuery.max_students; // Lotação máxima
+            var availableSeats = maxSeats - scheduleQuery.seats_available; // Vagas restantes
+            var instructorId = scheduleQuery.instructor; // ID do instrutor
+            var startDate = scheduleQuery.training_date; // A data de treinamento (do tipo Date)
+
+            // Verificar se o usuário já está inscrito
+            var userRegistered = false;
+            var regCheck = new GlideRecord('x_1593183_traini_0_training_enrollments');
+            regCheck.addQuery('opened_by', userId);
+            regCheck.addQuery('schedule', scheduleId);
+            regCheck.query();
+            if (regCheck.hasNext()) {
+                userRegistered = true;
+            }
+
+            // Verificar as condições para adicionar à lista de não mostrar
+            if (
+                userRegistered || // Já está cadastrado
+                availableSeats <= 0 || // Sem vagas disponíveis
+                instructorId == userId || // É o instrutor do treinamento
+                startDate < today // A data de treinamento já passou (ou é hoje)
+            ) {
+                notShowSchedules.push(scheduleId); // Agenda que não deve ser mostrada
+            } else {
+                availableSchedules.push(scheduleId); // Agenda disponível
+            }
+
+        }
+
+        // Retorna apenas as agendas disponíveis, separadas por vírgula
+        return availableSchedules.join(",");
+
+    },
+
+    type: 'TrainingUtils'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 18:58:02</sys_created_on>
+        <sys_id>20c95fbe83d71210889d5e20ceaad339</sys_id>
+        <sys_mod_count>75</sys_mod_count>
+        <sys_name>TrainingUtils</sys_name>
+        <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
+        <sys_update_name>sys_script_include_20c95fbe83d71210889d5e20ceaad339</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 13:31:15</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="DELETE">
+        <id>20c95fbe83d71210889d5e20ceaad339</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 18:58:02</sys_created_on>
+        <sys_id>c3d95bbe83d71210889d5e20ceaad366</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 18:58:02</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</application>
+        <file_path/>
+        <instance_id>f5cdcc2bdbb84e98ebdd2a5913961933</instance_id>
+        <instance_name>dev241981</instance_name>
+        <name>sys_script_include_20c95fbe83d71210889d5e20ceaad339</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1593183_traini_0.TrainingUtils&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;TrainingUtils&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var TrainingUtils = Class.create();
+TrainingUtils.prototype = {
+    initialize: function() {},
+
+    refQualTraining: function(userId) {
+        var notShowSchedules = [];
+        var availableSchedules = [];
+
+        // Pega a data atual (sem a parte da hora)
+        var today = new GlideDateTime(); // Pega data e hora atuais
+        today = today.getDate(); // Extrai apenas a data (sem a parte da hora)
+
+        var scheduleQuery = new GlideRecord('x_1593183_traini_0_training_schedules');
+        scheduleQuery.addQuery('training_date', '&gt;=', today); // Compara apenas com a data (sem hora)
+        scheduleQuery.query();
+
+        while (scheduleQuery.next()) {
+            var scheduleId = scheduleQuery.getUniqueValue(); // sys_id do treinamento
+            var maxSeats = scheduleQuery.max_students; // Lotação máxima
+            var availableSeats = maxSeats - scheduleQuery.seats_available; // Vagas restantes
+            var instructorId = scheduleQuery.instructor; // ID do instrutor
+            var startDate = scheduleQuery.training_date; // A data de treinamento (do tipo Date)
+
+            // Verificar se o usuário já está inscrito
+            var userRegistered = false;
+            var regCheck = new GlideRecord('x_1593183_traini_0_training_enrollments');
+            regCheck.addQuery('opened_by', userId);
+            regCheck.addQuery('schedule', scheduleId);
+            regCheck.query();
+            if (regCheck.hasNext()) {
+                userRegistered = true;
+            }
+
+            // Verificar as condições para adicionar à lista de não mostrar
+            if (
+                userRegistered || // Já está cadastrado
+                availableSeats &lt;= 0 || // Sem vagas disponíveis
+                instructorId == userId || // É o instrutor do treinamento
+                startDate &lt; today // A data de treinamento já passou (ou é hoje)
+            ) {
+                notShowSchedules.push(scheduleId); // Agenda que não deve ser mostrada
+            } else {
+                availableSchedules.push(scheduleId); // Agenda disponível
+            }
+
+        }
+
+        // Retorna apenas as agendas disponíveis, separadas por vírgula
+        return availableSchedules.join(",");
+
+    },
+
+    type: 'TrainingUtils'
+};
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-28 18:58:02&lt;/sys_created_on&gt;&lt;sys_id&gt;20c95fbe83d71210889d5e20ceaad339&lt;/sys_id&gt;&lt;sys_mod_count&gt;75&lt;/sys_mod_count&gt;&lt;sys_name&gt;TrainingUtils&lt;/sys_name&gt;&lt;sys_package display_value="Training Hub" source="x_1593183_traini_0"&gt;5f6bc26e83971210889d5e20ceaad34c&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Training Hub"&gt;5f6bc26e83971210889d5e20ceaad34c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_20c95fbe83d71210889d5e20ceaad339&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-31 13:31:15&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;20c95fbe83d71210889d5e20ceaad339&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-28 18:58:02&lt;/sys_created_on&gt;&lt;sys_id&gt;c3d95bbe83d71210889d5e20ceaad366&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-28 18:58:02&lt;/sys_updated_on&gt;&lt;table&gt;sys_script_include&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>312584771</payload_hash>
+        <record_name>TrainingUtils</record_name>
+        <reverted_from/>
+        <source>846473fe835b1210889d5e20ceaad36e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 13:31:15</sys_created_on>
+        <sys_id>25dba53f831f1610889d5e20ceaad3c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194bc8f007c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 13:31:15</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>a9dba53fa81f1610ebe322d2d6d48dc0</update_guid>
+        <update_guid_history>a9dba53fa81f1610ebe322d2d6d48dc0:312584771,939be9379d1f16104d3eeafd1b11f5e0:-1160838793,8b4ba9bbb91f1610831097224f3d2841:-1286487421,c3ca21fb1a1f1610d13cc94516a4c98f:-1101667017,f02a6d7b5d1f1610e64ddb9bbf523545:56213911,51c92d7b121f16106e1e873d70bffe4b:1238316788,f1e329b3dd1f16109ccc870ca8a56dfa:2107358156,92b3a9b37a1f1610eafe7f8844eac214:-1743018195,47332d73de1f1610f06e4ec82ee807f3:-920859091,88f061ff99db1610e124c56b0ea63821:-567770225,a56025bfa3db161063366f3332d5edb8:-1895410497,09ef193f81db1610d98d687f27f092dd:-1126003101,b52e51fbb7db1610eca74e7946790dbf:-1698051268,aaddd17bb6db1610d198d5d5b391280d:-1936230490,c19d99bb0adb161094848cd3b82d8840:1375559732,1eeb153be1db161048be2154c01c976b:-1951637865,a8cb95f7f9db161012d46f23bf535ee7:1123727121,92dadd7768db1610d954a01870384c2c:48488195,c96855f37adb161038e08e7e71fa163b:1535677023,c8a882af96dbd2103315ed5513b0ee5f:-1005728295,89688aaf75dbd210df7bcc47df456443:639007002,eff782af53dbd210af40bb9dbaf64e3f:-1136400099,a557066f41dbd21023537a4ec279e528:-1504055958,91c60eeb0bdbd210bdb0f996c7e1ef62:-1989273140,2d9686eb74dbd2104c782b3c53a52840:205966348,f766822fbcdbd2103cf5aaa4942a3160:2135928251,e0260eeb55dbd210a924b3b8e949e558:1609735169,07750aab9bdbd2104321f9d1760c7266:1578817103,e515022be8dbd210cc31208b649eab3e:1401764381,8d84422b74dbd210686d1df511865b9f:-663563148,8d72c2e39fdbd2104f404d54205a3e54:-1264871634,46df35239bdbd2100b1deaa4b5163d4e:-1813195877,dcdc35ef619bd2106c705e614f5833b1:667378268,5b7cf1ef6e9bd2103a55c7fd08305abb:-1177989882,826b3d6f0d9bd2109816106fdbe293af:1131443973,12cab12f909bd210352c3923a99d55ef:1549270163,306979ab229bd210c542e6543a88d904:1145152187,cf837de38a9bd210f71538daad666def:365630287,5080246b88d3d21046156fb83dde9bf8:-813770482,157ad423fad3d210d2a8592264b757a3:1399214351,38595063f8d3d210b4a01d1025aeefcb:1685899620,2639906341d3d210ac3008c24c749977:1151034730,acc8dcef4093d2106b7704b76d327d77:-219055432,b325946b6393d2103fd570f06e71433d:-1337338249,0d2f8c272293d2104340af34dd24466a:-1292676088,d367e19f75579210dcdfcac7a3c04179:-1393478465,bcf4ad5bf1579210774cc74557b0bf02:-1548457805,0674ad5b17579210f6df6184a0175b10:-1989490601,3ee3695bea57921006888f34fd05e22e:-60131371,9c436d1b01579210c635ceca6db61c21:-38822777,07b2add7ba57921057356b57dd4d3094:-2055007378,3652a9d7475792100393e51d4c1812f6:-2067816630,7efa601351539210bb04d8ddeb81c20b:-154981142,9bd7e4df5813921003b8871e10f31eb8:303219788,44e56c9b131392109c66951ad131a8c5:742244604,279468dbfe139210e75a4c08aad0777d:-2131857001,57e3609b44139210da69e9c63975675a:613477884,e063e41b96139210ef878b05c0f71cc1:1697791498,c12e905374139210f9d9d47371c5d9bb:-392859439,820c50533f1392104f4705a540985101:933079448,7ac8985ba2df5210c4980a5efa2388ac:-1776095106,199ebb0f4a5f5210aa660b1e027f1cc4:-2060066261,b92d774b685f52106c377321c9bfffa4:1174453692,cdc1afc7c1db521092860cfb0b1e52a4:1992482330,502d5b0397db521002c6a8d3dc34d75c:91219010,d86a1bcf8f9b52103a7324678c1cdb07:2082066798,9ff91b4f079b5210b0666b2e43c7a191:790513847,ae495b4ff79b52103a0df9b6fc5c1d25:-207707035,36475bcbcb9b52102aa47ff8e693ff5b:1926876340,b2e59f0b859b5210e611f009c1a6ac25:-770699198,b0431b87e89b52107e7804a97b95c3db:1581086674,edbf6f3aa05b1210500c5fec7bb3678a:-1849179183,ed9f6b7a685b1210ee03a31a7477b488:-522043364,7d49efbe971b1210afe9fa500d136cdd:667113453,657f13b64c1b1210e60fe6c1921ea0e3:581955100,dbd95fbe52d7121078da9c614389f451:-433590977</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 13:34:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>2cbeedd4c33442f08cfcc03647170309</sys_id>
+        <sys_metadata>20c95fbe83d71210889d5e20ceaad339</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TrainingUtils</sys_name>
+        <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
+        <sys_scope_delete display_value="">1206a1b050ee40c4859c00547ee34090</sys_scope_delete>
+        <sys_update_name>sys_script_include_20c95fbe83d71210889d5e20ceaad339</sys_update_name>
+        <sys_update_version display_value="sys_script_include_20c95fbe83d71210889d5e20ceaad339">25dba53f831f1610889d5e20ceaad3c1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 13:34:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1593183_traini_0.CoursesUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>CoursesUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var CoursesUtils = Class.create();
+CoursesUtils.prototype = {
+    initialize: function() {},
+    refQualCourses: function() {
+        var userId = gs.getUserID(); // Pega o ID do usuário logado
+        var coursesAlreadyEnrolled = [];
+
+        // 1. Busque todas as matrículas do usuário em uma única consulta
+        var gr = new GlideRecord('x_1593183_traini_0_training_enrollments'); // Substitua pela tabela de matrículas
+        gr.addQuery('opened_by', userId);
+        gr.addQuery('active', true); // Apenas matrículas ativas
+        gr.query();
+
+        // 2. Armazene os cursos aos quais o usuário já se inscreveu
+        while (gr.next()) {
+            var courseId = gr.course; // Substitua com o campo correto que referencia o curso
+            coursesAlreadyEnrolled.push(courseId);
+        }
+
+        // 3. Agora, verifique os cursos para os quais o usuário tem menos de 3 matrículas
+        var validCourses = [];
+        var countEnrollments;
+
+        // 4. Faça uma única consulta para verificar a contagem de matrículas por curso
+        var courseGR = new GlideRecord('x_1593183_traini_0_training_courses'); // Tabela dos cursos
+        courseGR.addQuery('sys_id', 'IN', coursesAlreadyEnrolled); // Filtra para os cursos válidos
+        courseGR.query();
+
+        while (courseGR.next()) {
+            var courseToCheckId  = courseGR.sys_id;
+
+            countEnrollments = new GlideRecord('x_1593183_traini_0_training_enrollments'); // Tabela de matrículas
+            countEnrollments.addQuery('course', courseToCheckId );
+            countEnrollments.addQuery('opened_by', userId);
+            countEnrollments.addQuery('active', true); // Matrículas ativas
+            countEnrollments.query();
+
+            // Se o usuário tem menos de 3 matrículas para o curso, adicione à lista
+            if (countEnrollments.getRowCount() < 3) {
+                validCourses.push(courseToCheckId );
+            }
+        }
+
+        // Retorna a lista de cursos válidos
+        return validCourses;
+    },
+
+
+
+    type: 'CoursesUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 14:11:45</sys_created_on>
+        <sys_id>9451fdff831f1610889d5e20ceaad3e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CoursesUtils</sys_name>
+        <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
+        <sys_update_name>sys_script_include_9451fdff831f1610889d5e20ceaad3e9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 14:11:45</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>9451fdff831f1610889d5e20ceaad3e9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 14:11:45</sys_created_on>
+        <sys_id>2e15b1f7835f1610889d5e20ceaad340</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 14:11:45</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

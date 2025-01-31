@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1593183_traini_0.TrainingUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>TrainingUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var TrainingUtils = Class.create();
+TrainingUtils.prototype = {
+    initialize: function() {},
+
+    refQualTraining: function() {
+        var enrolledSchedules = [];
+        var enrolledCourses = [];
+        var availableCourses = []; // Novo array para armazenar cursos disponíveis
+ 
+
+        var grEnrollment = new GlideRecord("x_1593183_traini_0_training_enrollments");
+        grEnrollment.addQuery("opened_by", gs.getUserID());
+        grEnrollment.query();
+
+        while (grEnrollment.next()) {
+            enrolledSchedules.push(grEnrollment.getValue("schedule"));
+            enrolledCourses.push(grEnrollment.getValue("course"));
+        }
+
+        var availableSchedules = [];
+        var grSchedules = new GlideRecord("x_1593183_traini_0_training_schedules");
+        grSchedules.addQuery("status", "1"); // Apenas agendamentos ativos
+        grSchedules.query();
+
+        while (grSchedules.next()) {
+            var scheduleId = grSchedules.getUniqueValue();
+            var courseId = grSchedules.getValue("course");
+
+            // Verificar se o usuário já se inscreveu 3 vezes neste curso
+            var enrollmentCount = 0;
+            var grCount = new GlideRecord("x_1593183_traini_0_training_enrollments");
+            grCount.addQuery("opened_by", gs.getUserID());
+            grCount.addQuery("course", courseId);
+            grCount.query();
+
+            while (grCount.next()) {
+                enrollmentCount++;
+            }
+
+            if (enrollmentCount >= 3) {
+                gs.info("⚠️ Usuário já atingiu o limite de 3 inscrições no curso: " + courseId);
+                continue;
+            }
+			gs.info("curso" + courseId + "chegou aqui.");
+
+            if (!enrolledSchedules.includes(scheduleId)) {
+                availableSchedules.push(scheduleId);
+
+                // Adicionar curso à lista de disponíveis (sem duplicatas)
+                if (!availableCourses.includes(courseId)) {
+                    availableCourses.push(courseId);
+                }
+            }
+        }
+
+        gs.info("✅ Cursos disponíveis: " + availableCourses.join(", "));
+
+        return {
+            schedules: availableSchedules.length > 0 ? "sys_idIN" + availableSchedules.join(",") : "sys_idINEMPTY",
+            courses: "sys_idIN" + availableCourses.join(",") // Retorna a lista de cursos disponíveis
+        };
+    },
+	type : 'TrainingUtils'
+};
+
+
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 13:36:10</sys_created_on>
+        <sys_id>ef8c257f831f1610889d5e20ceaad35d</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>TrainingUtils</sys_name>
+        <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
+        <sys_update_name>sys_script_include_ef8c257f831f1610889d5e20ceaad35d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 18:40:32</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>ef8c257f831f1610889d5e20ceaad35d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 13:36:10</sys_created_on>
+        <sys_id>d1fc257f831f1610889d5e20ceaad339</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 13:36:10</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
