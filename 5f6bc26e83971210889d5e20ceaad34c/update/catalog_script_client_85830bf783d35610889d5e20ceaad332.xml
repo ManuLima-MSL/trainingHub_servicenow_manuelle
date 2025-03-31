@@ -19,13 +19,30 @@
         <order/>
         <published_ref/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
-   if (isLoading || newValue == '') {
-      return;
-   }
+    if (newValue == '') {
+		g_form.clearValue('schedule');
+        return;
+    }
+    if (newValue) {
+        generateGlideAjax(fillSchedules, 'schedule');
+    }
 
-   var course = g_form.getValue("course");
-   var schedule
-   
+    function generateGlideAjax(meth, variable) {
+        var ga = new GlideAjax('CourseSchedulesUtills');
+        ga.addParam('sysparm_name', meth);
+        ga.addParam('sysparm_course_sysId', newValue);
+        ga.getXML(callBackFunction);
+
+        // the callback function for returning the result from the server-side code
+        function callBackFunction(response) {
+            var answer = response.responseXML.documentElement.getAttribute("answer");
+            if (answer) {
+                g_form.clearValue(variable);
+				g_form.setValue(variable, answer);
+            }
+        }
+    }
+
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -33,7 +50,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>85830bf783d35610889d5e20ceaad332</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Course's Schedules</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Hub" source="x_1593183_traini_0">5f6bc26e83971210889d5e20ceaad34c</sys_package>
@@ -41,7 +58,7 @@
         <sys_scope display_value="Training Hub">5f6bc26e83971210889d5e20ceaad34c</sys_scope>
         <sys_update_name>catalog_script_client_85830bf783d35610889d5e20ceaad332</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-31 20:07:20</sys_updated_on>
+        <sys_updated_on>2025-02-24 17:51:35</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
